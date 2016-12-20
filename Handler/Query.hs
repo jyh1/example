@@ -3,16 +3,16 @@ module Handler.Query where
 import Import
 import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3)
 import Handler.Home
+import Data.Maybe
 
 getQueryR :: Handler Html
 getQueryR = do
   ((result, _), _) <- runFormGet sampleForm
   case result of
-    FormSuccess (TranscriptForm trans) -> defaultLayout [whamlet|
-          <p>
-            The query transcript is #{trans}
-        |]
-    res -> error (show res)
+    FormSuccess (TranscriptForm trans) -> do
+      ps <- runDB $ selectFirst [EmailEmail ==. trans] []
+      defaultLayout $(widgetFile "query")
+    res -> redirect HomeR
 
 -- postHomeR :: Handler Html
 -- postHomeR = do
