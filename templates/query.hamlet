@@ -1,5 +1,8 @@
 <div class="col-md-8">
-  $maybe article <- ps
-    <h2>#{fromJust $ emailVerkey $ entityVal article}
-  $nothing
-    <h2>No entry yet.
+  $if null ps
+    <p>No entry yet.
+  $else
+    <ul>
+      $forall binding <- ps
+        $with bindingV <- entityVal binding
+          <li> #{bindingProtein bindingV}, #{bindingPosition bindingV}

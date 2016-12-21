@@ -10,7 +10,7 @@ getQueryR = do
   ((result, _), _) <- runFormGet sampleForm
   case result of
     FormSuccess (TranscriptForm trans) -> do
-      ps <- runDB $ selectFirst [EmailEmail ==. trans] []
+      ps <- runDB $ selectList [BindingRna ==. trans] []
       defaultLayout $(widgetFile "query")
     res -> redirect HomeR
 
