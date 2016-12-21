@@ -55,7 +55,7 @@ sampleForm = renderBootstrap3 BootstrapBasicForm $ TranscriptForm
             , fsName = Nothing
             , fsAttrs =
                 [ ("class", "form-control")
-                , ("placeholder", "e.g. NM_031449, NM_002360, NM_000048...")
+                , ("placeholder", "e.g. NM_001195683, NR_036634, NM_001166005...")
                 -- , ("align", "center")
                 ]
             }

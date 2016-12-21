@@ -12,6 +12,7 @@ getQueryR = do
   case result of
     FormSuccess (TranscriptForm trans) -> do
       ps <- runDB $ selectList [BindingRna ==. strip trans] []
+      let val = map ( (bindingProtein &&& bindingPosition). entityVal) ps
       defaultLayout $(widgetFile "query")
     _ -> redirect HomeR
 

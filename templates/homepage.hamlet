@@ -1,26 +1,26 @@
-<div .masthead>
-    <div .container>
-        <div .row>
-            <h1 .header>
-                CLIP Data Query Sites
-            <h2>
-                Query arbitrary transcript's binding proteins from CLIP probing data
-            <a href=@{HomeR} .btn.btn-info.btn-lg>
-                Start!
+$# <div .masthead>
+$#     <div .container>
+$#         <div .row>
+$#             <h1 .header>
+$#                 CLIP Data Query Sites
+$#             <h2>
+$#                 Query arbitrary transcript's binding proteins from CLIP probing data
+$#             <a href=@{HomeR} .btn.btn-info.btn-lg>
+$#                 Start!
 
 <div .container>
     <!-- Starting
         ================================================== -->
     <div .bs-docs-section>
         <div .row>
-            <div .col-lg-12>
-                <div .page-header align="center">
+            <div .col-md-8>
+                <div .page-header>
                     <h1 #start>Start Querying
 
                     <p>
                         Enter transcript name in the box below and submit to get query results.
                     <p>
-                        Examples: NM_031449, NM_002360, NM_000048.
+                        Examples: NM_001195683, NR_036634, NM_001166005.
                     <!-- <ul .list-group>
 
                         <li .list-group-item>
@@ -50,7 +50,7 @@
 
                         <li .list-group-item ##{aDomId}>
                             If you had javascript enabled then you wouldn't be seeing this. -->
-                <div .col-lg-6.col-lg-offset-3>
+                $# <div .col-lg-6.col-lg-offset-3>
                     <div .bs-callout bs-callout-info well>
                         <form .form-horizontal method=get action=@{QueryR} enctype=#{formEnctype}>
                           ^{formWidget}
