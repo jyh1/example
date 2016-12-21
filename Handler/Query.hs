@@ -4,15 +4,16 @@ import Import
 import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3)
 import Handler.Home
 import Data.Maybe
+import Data.Text (strip)
 
 getQueryR :: Handler Html
 getQueryR = do
   ((result, _), _) <- runFormGet sampleForm
   case result of
     FormSuccess (TranscriptForm trans) -> do
-      ps <- runDB $ selectList [BindingRna ==. trans] []
+      ps <- runDB $ selectList [BindingRna ==. strip trans] []
       defaultLayout $(widgetFile "query")
-    res -> redirect HomeR
+    _ -> redirect HomeR
 
 -- postHomeR :: Handler Html
 -- postHomeR = do
