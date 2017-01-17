@@ -20,8 +20,8 @@ Gene
     characterizationStatus Published
     systematicID Text
     synonyms Text
-    product Text
+    product Product
     productSize Text
---    genomicLocation GenomicLocation
+    genomicLocation GenomicLocation
 
  -- By default this file is used in Model.hs (which is imported by Foundation.hs)
