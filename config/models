@@ -28,11 +28,12 @@ Image
     filePath Text
     type Text -- Cox4-GFP mCherry DIC ...
     target Text Maybe -- mitochondria, microtubule ...
+    gene GeneId
 
-GeneImage
-    geneId GeneId
-    imageId ImageId
-    UniqueGeneImage geneId imageId
-    
+-- GeneImage
+--    geneId GeneId
+--    imageId ImageId
+--    UniqueGeneImage geneId imageId
+
 
  -- By default this file is used in Model.hs (which is imported by Foundation.hs)
