@@ -15,10 +15,13 @@ Comment json -- Adding "json" causes ToJSON and FromJSON instances to be derived
     deriving Eq
     deriving Show
 
-Binding
-  rna Text
-  position Int
-  protein Text
-  deriving Show
+Gene
+    standardName Text
+    characterizationStatus Published
+    systematicID Text
+    synonyms Text
+    product Text
+    productSize Text
+--    genomicLocation GenomicLocation
 
  -- By default this file is used in Model.hs (which is imported by Foundation.hs)
