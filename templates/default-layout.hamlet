@@ -26,9 +26,9 @@ $#                         <a href="@{route}">#{label}
     <div .container>
         <div .row>
             <h1 .header>
-                CLIP Data Query Sites
+                The name of this website
             <h2>
-                Query arbitrary transcript's binding proteins from CLIP probing data
+                A short description of the website's functionailites and contents.
             <a href=@{HomeR} .btn.btn-info.btn-lg>
                 Start!
 

@@ -18,9 +18,9 @@ $#                 Start!
                     <h1 #start>Start Querying
 
                     <p>
-                        Enter transcript name in the box below and submit to get query results.
+                        Enter gene id in the box below and submit to get query results.
                     <p>
-                        Examples: NM_001195683, NR_036634, NM_001166005.
+                        Examples: SPAC890.02c ...
                     <!-- <ul .list-group>
 
                         <li .list-group-item>
