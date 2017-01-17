@@ -27,7 +27,7 @@ getHomeR = do
     defaultLayout $ do
         let (commentFormId, commentTextareaId, commentListId) = commentIds
         aDomId <- newIdent
-        setTitle "Welcome to CLIP Query Site"
+        setTitle "The Name of the website"
         $(widgetFile "homepage")
 
 -- postHomeR :: Handler Html
@@ -49,13 +49,13 @@ sampleForm = renderBootstrap3 BootstrapBasicForm $ TranscriptForm
     <$> areq textField textSettings Nothing
     -- Add attributes like the placeholder and CSS classes.
     where textSettings = FieldSettings
-            { fsLabel = "Please Input Transcript name:"
+            { fsLabel = "Please Input Gene ID:"
             , fsTooltip = Nothing
             , fsId = Nothing
             , fsName = Nothing
             , fsAttrs =
                 [ ("class", "form-control")
-                , ("placeholder", "e.g. NM_001195683, NR_036634, NM_001166005...")
+                , ("placeholder", "e.g. SPAC890.02c")
                 -- , ("align", "center")
                 ]
             }
