@@ -28,14 +28,14 @@ data Product = Product {
   deriving (Show, Read, Eq)
 derivePersistField "Product"
 
-data GeneInfo = GeneInfo{
-    standardName :: Text
-  , systematicID :: Text
-  , cds :: Text
-  , synonyms :: Text
-}
-  deriving (Show, Read, Eq)
-derivePersistField "GeneInfo"
+-- data GeneInfo = GeneInfo{
+--     standardName :: Text
+--   , systematicID :: Text
+--   , cds :: Text
+--   , synonyms :: Text
+-- }
+--   deriving (Show, Read, Eq)
+-- derivePersistField "GeneInfo"
 
 data Images = Images {
     cox4_GFP :: String

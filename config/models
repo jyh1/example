@@ -16,10 +16,23 @@ Comment json -- Adding "json" causes ToJSON and FromJSON instances to be derived
     deriving Show
 
 Gene
-    geneInfo GeneInfo -- standard name, systematic ID, synonyms, cds
-    characterizationStatus Published
-    product Product -- product, product size
+    standardName Text
+    synonyms Text
+    systematicID Text
+    cds Text
+    UniqueSystematicID systematicID
     genomicLocation GenomicLocation
-    images Images
+    product Product
+
+Image
+    filePath Text
+    type Text -- Cox4-GFP mCherry DIC ...
+    target Text Maybe -- mitochondria, microtubule ...
+
+GeneImage
+    geneId GeneId
+    imageId ImageId
+    UniqueGeneImage geneId imageId
+    
 
  -- By default this file is used in Model.hs (which is imported by Foundation.hs)
