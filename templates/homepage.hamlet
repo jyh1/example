@@ -5,7 +5,7 @@ $#             <h1 .header>
 $#                 CLIP Data Query Sites
 $#             <h2>
 $#                 Query arbitrary transcript's binding proteins from CLIP probing data
-$#             <a href=@{HomeR} .btn.btn-info.btn-lg>
+            $# <a href=@{HomeR} .btn.btn-info.btn-lg>
 $#                 Start!
 
 <div .container>
