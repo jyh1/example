@@ -37,6 +37,14 @@ data GeneInfo = GeneInfo{
   deriving (Show, Read, Eq)
 derivePersistField "GeneInfo"
 
+data Images = Images {
+    cox4_GFP :: String
+  , mCherry_atb2 :: String
+  , dic :: String
+  , overlay :: String
+}
+  deriving (Show, Read, Eq)
+derivePersistField "Images"
 -- instance Show GenomicLocation where
 --   show (GenomicLocation chromo (sSt, sEn) (cdsSt, cdsEn)) =
 --     unlines ["Chromosome " + show chromo]
