@@ -12,11 +12,13 @@ getQueryR = do
   case result of
     FormSuccess (TranscriptForm trans) -> do
       gene <- runDB $ getBy (UniqueSystematicID (strip trans))
-      let maybeGeneId = fmap entityKey gene
-      images <- case maybeGeneId of
-        Just gid -> runDB $ selectList [ImageGene ==. gid] []
+      images <- case gene of
+        Just entity -> runDB $ selectList [ImageGene ==. (entityKey entity)] []
         Nothing -> return []
+      let
       -- let val = map ( (bindingProtein &&& bindingPosition). entityVal) ps
+      -- geneVal = entityVal gene
+
       defaultLayout $(widgetFile "query")
     _ -> redirect HomeR
 
